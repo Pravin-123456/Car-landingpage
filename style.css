@@ -1,0 +1,733 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow: hidden;
+  overflow-y: scroll;
+  position: relative;
+  font-family: "Lato", serif;
+}
+.section1 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.section1, .section2, .section3 {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+
+.container {
+  width: 100vw;
+  height: 63vh;
+  background-color: #f4a261;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 4rem;
+  z-index: 10;
+  animation: nav 2.5s ease-in 6s forwards;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(1px);
+}
+
+.navbar .title {
+  font-size: 2rem;
+  color: #000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar ul li {
+  display: inline;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #f4a261;
+}
+
+.car-container {
+  animation: car 2s ease-in 1 forwards;
+  margin-top: 13rem;
+  overflow: hidden;
+  position: absolute;
+}
+
+.wheel {
+  position: absolute;
+  top: 175px;
+  left: 105px;
+  width: 110px;
+  animation: wheel 1s linear infinite reverse;
+}
+
+.wheel2 {
+  position: absolute;
+  top: 175px;
+  left: 450px;
+  width: 110px;
+  animation: wheel 1s linear infinite reverse;
+}
+
+.car-t {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.car-top1 {
+  position: absolute;
+  transform: rotate(-65deg);
+  right: 120%;
+  top: -60%;
+  animation: carTop1 1.5s linear forwards;
+  animation-delay: 2s;
+  width: 300px;
+}
+
+.car-top2 {
+  position: absolute;
+  transform: rotate(65deg);
+  left: 120%;
+  top: -60%;
+  animation: carTop2 1.5s linear forwards;
+  animation-delay: 2s;
+  width: 300px;
+}
+
+.car-img {
+  position: absolute;
+  top: 150px;
+  left: 35%;
+  width: 30rem;
+  opacity: 0;
+  transform: scale(0);
+  animation: carAppear 5s linear 1 forwards;
+  animation-delay: 3.5s;
+  z-index: 20;
+}
+
+.ani-text::before {
+  content: "PORSCHE";
+  position: absolute;
+  left: 11rem;
+  bottom: 60%;
+  font-size: 4.7rem;
+  font-weight: bold;
+  color: #000;
+  animation: textAppear 1.5s ease-in 1 forwards;
+  animation-delay: 5s;
+  opacity: 0;
+  text-shadow: 0px 2px 2px #000;
+}
+.ani-text::after {
+  content: "911 GT3";
+  position: absolute;
+  right: 13rem;
+  bottom: 30%;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #000;
+  animation: textAppear2 1.5s ease-in 1 forwards;
+  animation-delay: 5s;
+  opacity: 0;
+  text-shadow: 0px 2px 2px #000;
+}
+
+.hero-text {
+  position: absolute;
+  width: 750px;
+  height: 300px;
+  top: 15rem;
+  padding: 2rem;
+  padding-left: 4rem;
+  animation: porsche 2s ease-in forwards;
+  animation-delay: 6.5s;
+  opacity: 0;
+}
+
+.hero-text h1 {
+  font-size: 5rem;
+  margin-left: 2rem;
+  text-wrap: nowrap;
+}
+.hero-text p {
+  font-size: 1.3rem;
+  padding-top: 1rem;
+  margin-left: 4rem;
+}
+
+.rpm {
+  color: #de2020;
+}
+
+.section2 {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 0 10rem;
+}
+
+.sec2-container1 {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  top: 15%;
+  text-align: center;
+}
+.sec2-container2 {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  top: 25%;
+  text-align: center;
+  margin-left: 3rem;
+}
+
+.sec2-info > ul,
+h1 {
+  list-style: none;
+}
+.sec2-engine{
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 50px #0000006c;
+  border: none;
+  animation: engine 1s linear;
+}
+
+.section-2-trans{
+  width: 25rem;
+  height: 15rem;
+}
+
+.section-2-engine{
+  width: 25rem;
+}
+
+.sec2-info h1{
+  font-size: 3rem;
+}
+.sec2-info li{
+  font-size: 1.2rem;
+}
+
+.road {
+  width: 100vw;
+  height: 300px;
+  opacity: 0;
+  animation: road 2s ease-out forwards;
+  animation-delay: 7.5s;
+}
+
+.section3{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.sec3-container {
+  position: relative;
+}
+
+.aerodynamic-car {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.sec3-text-info h1 {
+  position: absolute;
+  left: 25%;
+  top: 7%;
+  font-size: 7rem;
+  color: #fff;
+}
+.sec3-text-info .wing {
+  position: absolute;
+  left: 65%;
+  top: 30%;
+  opacity: 0;
+  font-size: 1.2rem;
+  color: #000;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 50px #0000006c;
+  padding: 1rem;
+  animation: aero .2s linear 1.5s forwards;
+}
+
+.sec3-text-info .down {
+  position: absolute;
+  left: 10%;
+  top: 40%;
+  font-size: 1.2rem;
+  color: #000;
+  opacity: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 50px #0000006c;
+  padding: 1rem;
+  animation: aero .2s linear 1s forwards;
+}
+
+.sec3-text-info .carbon {
+  position: absolute;
+  left: 15%;
+  top: 30%;
+  font-size: 1.2rem;
+  color: #000;
+  opacity: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 50px #0000006c;
+  padding: 1rem;
+  animation: aero .2s linear .5s forwards;
+}
+
+.sec3-text-info {
+  text-align: start;
+}
+
+.section4 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.sec4-container{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+  top: 10rem;
+  font-family: "Lato", serif;
+  font-weight: 600;
+  width: 100rem;
+  right: 50px;
+  
+}
+
+.sec4-card-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 50px #0000006c;
+  padding: 2rem;
+  gap: 2.5rem;
+  text-wrap: wrap;
+  animation: engine  linear;
+  animation-timeline: view();
+  animation-range: entry 10% cover 40%;
+}
+.sec4-card-container2 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 50px #0000006c;
+  padding: 2rem;
+  gap: 1rem;
+  text-wrap: wrap;
+  width: 30rem;
+  animation: engine linear;
+  animation-timeline: view();
+  animation-range: entry 10% cover 40%;
+}
+
+.br-1 {
+  width: 200px;
+  animation: br 1s linear infinite reverse;
+  transform: scale(0.8);
+}
+
+.br-2 {
+  width: 200px;
+  animation: br 1s linear infinite reverse;
+  transform: scale(0.8);
+}
+.wheel-1 {
+  width: 250px;
+  animation: wheel 5s linear infinite reverse;
+}
+
+.section5 {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+}
+
+.price-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 30%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  color: #fff;
+  padding: 2rem;
+  z-index: 2;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+
+.price-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #f4a261; /* Accent color for heading */
+}
+
+.price-container p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.price{
+  font-size: 1.5rem !important;
+}
+
+.price-span{
+  color: #f4a261;
+  font-size: 1.7rem !important;
+}
+
+.footer {
+  height: auto;
+}
+
+.contact{
+  position: relative;
+  background-size: cover;
+  padding: 10px 100px;
+  margin: 0 0 0 30px;
+}
+.content{
+  text-align: center;
+  margin-top: 10px;
+}
+.content h2{
+  font-weight: 500;
+  margin-top: 20px;
+  font-size: 36px ;
+}
+.content p{
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+hr{
+  margin-top: 15px;
+
+}
+.cotainer{
+  display: flex;
+  position: relativ;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.contact info .box {
+position: relative;
+display: flex;
+padding: 20px 0;
+justify-content: center;
+align-items: center;
+}
+.box{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.box .icon{
+  font-size: 30px;
+}
+.cotainer.box h3 p{
+  top: 10px;
+}
+
+.icon{
+  width: 60px; 
+  height: 60px;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 50px;
+  bottom: 10px;
+}
+
+.forms {
+  border-radius: 10px;
+  display: flex;
+  background-color: white;
+  color: black;
+  position: absolute;
+  left: 600px;
+  bottom: 3.5rem;
+  align-items: center;
+  margin-top: 10px;
+  width: 40%;
+  padding: 40px;
+}
+.forms h2{
+text-align: center;
+color: #000;
+}
+input{
+  width: 200px;
+  margin-top: 15px;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  color: black;
+}
+label
+{
+position: relative;
+color: #000;
+}
+textarea{
+  width: 200px;
+  margin-top: 15px;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  resize: none;
+  color: black;
+}
+button{
+  border: none;
+  background-color: lightskyblue;
+  padding: 10px 10px;
+  letter-spacing: 1px;
+  width: 100px;
+  margin-top: 30px;
+  border-radius: 50px;
+
+}
+.iq ul{
+  display: flex;
+  position: relative;
+  bottom: 5px;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+ul li a{
+  margin-left: 20px;
+  justify-content: center;
+}
+li i{
+  font-size: 30px;
+}
+ul p{
+  position: relative;
+  justify-content: flex-start;
+}
+a:hover{
+  color: skyblue;
+}
+
+i{
+  color: blue;
+}
+
+@keyframes wheel {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes br {
+  from{
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes car {
+  0% {
+    transform: translateX(120rem);
+  }
+
+  100% {
+    transform: translateX(-60rem);
+  }
+}
+
+@keyframes carTop1 {
+  100% {
+    top: 90%;
+    right: -40%;
+  }
+}
+@keyframes carTop2 {
+  100% {
+    top: 90%;
+    left: -40%;
+  }
+}
+
+@keyframes carAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  10% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  60% {
+    transform: scale(1) translateX(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateX(23rem);
+  }
+}
+
+@keyframes textAppear {
+  0% {
+    transform: translateX(10rem);
+  }
+  40% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes textAppear2 {
+  0% {
+    transform: translateX(-10rem);
+  }
+  40% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes porsche {
+  0% {
+    transform: translateX(-10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes nav {
+  from {
+    transform: translateY(-5rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes road {
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes engine {
+  0%{
+    opacity: 0;
+    transform: scale(0);
+  } 
+  80% {
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+   transform: scale(1);
+  }
+}
+
+@keyframes aero {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
